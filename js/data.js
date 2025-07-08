@@ -19,7 +19,7 @@ const musicData = [
         artist: "Orchestral Minds",
         category: "Dramatical",
         isFeatured: false,
-        imageSrc: "https://picsum.photos/id/20/400/400",
+        imageSrc: "https://cdn-icons-png.flaticon.com/128/4284/4284717.png",
         audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
         downloadLink: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
     },
@@ -29,7 +29,7 @@ const musicData = [
         artist: "Dataflow",
         category: "Glitch",
         isFeatured: false,
-        imageSrc: "https://picsum.photos/id/30/400/400",
+        imageSrc: "https://cdn-icons-png.flaticon.com/128/4284/4284717.png",
         audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
         downloadLink: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
     },
@@ -39,7 +39,7 @@ const musicData = [
         artist: "DJ Loopz",
         category: "Mixed + New Mixed",
         isFeatured: true,
-        imageSrc: "https://picsum.photos/id/40/400/400",
+        imageSrc: "https://cdn-icons-png.flaticon.com/128/4284/4284717.png",
         audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
         downloadLink: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
     },
@@ -49,7 +49,7 @@ const musicData = [
         artist: "Creator's Choice",
         category: "Mostly Used",
         isFeatured: false,
-        imageSrc: "https://picsum.photos/id/50/400/400",
+        imageSrc: "https://cdn-icons-png.flaticon.com/128/4284/4284717.png",
         audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
         downloadLink: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
     },
@@ -59,7 +59,7 @@ const musicData = [
         artist: "SoundFX",
         category: "Sfx music",
         isFeatured: false,
-        imageSrc: "https://picsum.photos/id/60/400/400",
+        imageSrc: "https://cdn-icons-png.flaticon.com/128/4284/4284717.png",
         audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
         downloadLink: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
     }
