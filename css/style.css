@@ -1,0 +1,167 @@
+/* css/style.css */
+
+/* --- General & Theme --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212 !important;
+}
+
+:root {
+    --theme-red: #e50914;
+    --dark-primary: #121212;
+    --dark-secondary: #1c1c1c;
+    --dark-tertiary: #2a2a2a;
+    --border-color: #444;
+}
+
+/* --- Controls Bar --- */
+.controls-bar {
+    background: rgba(25, 25, 25, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    z-index: 1000;
+    top: 1rem;
+}
+
+.form-control:focus {
+    background-color: #333 !important;
+    border-color: var(--theme-red) !important;
+    color: white !important;
+    box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+}
+
+.filter-btn {
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-tertiary);
+    color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: var(--theme-red);
+    border-color: var(--theme-red);
+    color: white;
+    font-weight: 500;
+}
+.spinner-border {
+    color: var(--theme-red) !important;
+}
+
+/* --- Music Card (Logo Art Redesign) --- */
+.music-card {
+    background-color: var(--dark-secondary);
+    border-radius: 0.75rem;
+    border: 1px solid var(--dark-tertiary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.music-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: var(--border-color);
+}
+.music-card.playing {
+    border-color: var(--theme-red);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.track-art {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+/* --- CHANGED: Title color is now bright white --- */
+.track-info .card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: #ffffff; /* Explicitly set to white */
+}
+.track-info .card-text {
+    font-size: 0.9rem;
+    color: #a0a0a0; /* Kept artist name slightly muted for contrast */
+}
+
+.category-badge {
+    font-size: 0.75em;
+    font-weight: 500;
+    background-color: var(--theme-red) !important;
+}
+
+.btn-preview {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: #f0f0f0;
+}
+.btn-preview:hover {
+    background-color: var(--dark-tertiary);
+    border-color: #666;
+}
+
+.btn-unlock {
+    background-color: var(--theme-red);
+    border-color: var(--theme-red);
+    color: white;
+}
+.btn-unlock:hover {
+    background-color: #c00812;
+    border-color: #c00812;
+}
+
+/* --- NEW: Force white text color during countdown --- */
+.btn-unlock:disabled {
+    background-color: #c00812;
+    border-color: #c00812;
+    color: #ffffff !important; /* Force white text */
+    opacity: 0.85 !important;   /* Use opacity to show disabled state */
+}
+
+/* --- Audio Player --- */
+.audio-player-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-secondary);
+    border-top: 1px solid var(--dark-tertiary);
+    z-index: 1050;
+}
+.player-art {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+#main-audio-player {
+    width: 50%;
+    min-width: 300px;
+}
+
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+    .controls-bar {
+        position: static;
+    }
+    #main-audio-player {
+        width: 100%;
+        min-width: unset;
+    }
+    .player-info {
+        max-width: 100px;
+    }
+}
