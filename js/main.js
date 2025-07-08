@@ -127,29 +127,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // The rest of the functions are pasted here for completeness, no changes needed in them.
     function createMusicCard(track) {
-        return `
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="card music-card" data-track-id="${track.id}">
-                    <div class="card-top">
-                        <img src="${track.imageSrc}" class="track-art" alt="${track.title}">
-                        <div class="track-info">
-                            <h5 class="card-title text-truncate">${track.title}</h5>
-                            <p class="card-text text-white-50">${track.artist}</p>
-                            <span class="badge rounded-pill category-badge">${track.category}</span>
-                        </div>
-                    </div>
-                    <div class="d-grid gap-2 mt-auto">
-                        <button class="btn btn-sm btn-preview" data-audio-src="${track.audioSrc}" data-track-id="${track.id}">
-                            <i class="bi bi-play-fill"></i> Preview
-                        </button>
-                        <button class="btn btn-sm btn-unlock" data-download-link="${track.downloadLink}" data-track-title="${track.title}">
-                            <i class="bi bi-unlock-fill"></i> Unlock Download
-                        </button>
+    return `
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="card music-card" data-track-id="${track.id}">
+                <div class="card-top">
+                    <img src="${track.imageSrc}" class="track-art" alt="${track.title}">
+                    <div class="track-info">
+                        <h5 class="card-title text-truncate" title="${track.title}">${track.title}</h5>
+                        
+                        <p class="card-text text-white-50">${track.artist}</p>
+                        <span class="badge rounded-pill category-badge">${track.category}</span>
                     </div>
                 </div>
+                <div class="d-grid gap-2 mt-auto">
+                    <button class="btn btn-sm btn-preview" data-audio-src="${track.audioSrc}" data-track-id="${track.id}">
+                        <i class="bi bi-play-fill"></i> Preview
+                    </button>
+                    <button class="btn btn-sm btn-unlock" data-download-link="${track.downloadLink}" data-track-title="${track.title}">
+                        <i class="bi bi-unlock-fill"></i> Unlock Download
+                    </button>
+                </div>
             </div>
-        `;
-    }
+        </div>
+    `;
+}
     function renderMusicList(tracks) {
         loadingIndicator.style.display = 'none';
         musicListContainer.innerHTML = '';

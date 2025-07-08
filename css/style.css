@@ -91,13 +91,28 @@ body {
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
-    color: #ffffff; /* Explicitly set to white */
+    color: #ffffff;
 }
 .track-info .card-text {
     font-size: 0.9rem;
-    color: #a0a0a0; /* Kept artist name slightly muted for contrast */
+    color: #a0a0a0; 
+}
+.track-info {
+    /* This new property prevents flexbox from stretching the container */
+    min-width: 0;
 }
 
+.track-info .card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: #ffffff;
+    
+    /* These properties ensure the text is cut off with "..." */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .category-badge {
     font-size: 0.75em;
     font-weight: 500;
